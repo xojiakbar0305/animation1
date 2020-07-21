@@ -1,0 +1,56 @@
+.boxs {
+	width: 400px; 
+	margin: 100px auto;
+}
+.box {
+	position: relative;
+	width: 60vh;
+	height: 60vh;
+	background: linear-gradient(
+		yellow 0,
+		red 30%,
+		orange 50%,
+		green 80%,
+		gold
+	);
+	border-radius: 50%;
+}
+.box::after {
+	content: '';
+	position: absolute;
+	top: 35px;
+	right: 35px;
+	bottom: 35px;
+	left: 35px;
+	border-radius: 50%;
+	background-color: #fff;
+}
+.box2 {
+	position: absolute;
+	top: 160px;
+	right: 155px;
+	bottom: 0;
+	left: 160px;
+	z-index: 999;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: linear-gradient(
+		yellow 0,
+		blue 30%,
+		orange 50%,
+		skyblue 80%,
+		gold
+	);
+}
+.box {
+	animation: box 0.5s linear infinite;
+}
+@keyframes box {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
